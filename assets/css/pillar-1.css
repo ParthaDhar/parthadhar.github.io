@@ -10609,7 +10609,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 }
 
 .theme-progress-bar-dark {
-  background-color: #434E5E;
+  background-color: #7d899b;
 }
 
 .resume-wrapper {
@@ -10622,7 +10622,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
 }
 
 .resume-header {
-  background: #434E5E;
+  background: #7d899b;
   color: rgba(255, 255, 255, 0.9);
   height: 220px;
 }
