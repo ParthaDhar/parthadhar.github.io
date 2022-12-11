@@ -21,6 +21,9 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
 
 	<style>
+		.resume-wrapper-inner {
+			max-width: 1100px;
+		}
 		@media print
 		{
 			.col-lg-9
@@ -55,6 +58,37 @@
 		.badge-light:focus, a.badge-light.focus {
 			outline: 0;
 			box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+		}
+		.mtopp{
+			margin-top: 5px;
+		}
+		.mtopercent{
+			margin-top: 100%;
+		}
+		.resume-project-name {
+			color: #58677c;
+			font-size: 0.875rem;
+			font-weight: 500;
+			border-radius: 5px;
+			padding: 2px 3px 2px 3px;
+			background-color: #dae0e5;
+		}
+		.resume-project-desc {
+			font-size: 0.875rem;
+			color: #4b4f54;
+			text-align: justify;
+		}
+		.resume-project-tags {
+			font-size: 0.875rem;
+			padding: 2px 3px 2px 3px;
+			font-weight: 600;
+			color: #7d838b;
+			text-decoration: underline;
+		}
+		.resume-project-tags:hover, .resume-project-tags:focus {
+			border-radius: 5px;
+			color: #212529;
+			background-color: #dae0e5;
 		}
 	</style>
 
@@ -96,10 +130,10 @@
 			<div class="resume-body p-5">
 				<section class="resume-section summary-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
-					<div class="resume-section-content">
+					<div class="resume-section-content" style="font-size: 15px;text-align: justify;">
 						<p class="mb-0"> Senior Software Developer specializing in back-end development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in PHP OOP, MySQL, JavaScript. Moslty worked in Laravel (ui: bootstrap/vue).</p>
 						<p class="mb-0">Wrote back-end code for 4 working business applications, 11 microservices in NodeJs+MongoDb & 5 with Web3+NodeJs.</p>
-						<p class="mb-0">Also done automation setup for 2 organisations with CI/CD-runner/Docker/k8s, Managed 15+ VPS (+ 2 AWS accounts & 1 dedicated server), <a class="text-reset text-link" href="https://repos.mydevfactory.com/" target="_blank">Self-Hosted Git Setup</a> with Sonarqube/trivy code-scanning rules, for all developers in the current Company.</p>
+						<p class="mb-0">Also done automation setup for 2 organisations with CI/CD-runner/Docker/k8s, Managed 15+ VPS (+ 2 AWS accounts & 1 dedicated server) with CloudFlare/GoDaddy, Installed and managed BTC/TRON/Matic/ETH(Geth) fullnodes, <a class="text-reset text-link" href="https://repos.mydevfactory.com/" target="_blank">Self-Hosted Git Setup</a> with Sonarqube/trivy code-scanning rules, for all developers in the current Company.</p>
 					</div>
 				</section><!--//summary-section-->
 				<div class="row">
@@ -119,25 +153,121 @@
 										</div><!--//resume-timeline-item-header-->
 										<div class="resume-timeline-item-desc">
 											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Projects:</h4>
-											<p></p>
 											<ul>
-												<li>Metronix-Trading</li>
-												<li>IMBA-Exchange</li>
-												<li>Intercrone</li>
-												<li>UTurn</li>
-												<li>Switcha</li>
-												<li>Universe Careers</li>
+												<li><!-- MeoxClub -->
+													<div class="resume-project-name ms-auto">Cryptocurrency Trading Tool (Version 2)</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Token trading-bot management tool using different centralized exchanges’ (eg:Binance) API. Users can add their API key/secret from exchanges and prepare algorithms for different types of trading. It also have trading algorithm templates sharing between users, and portfolio analysis.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span> NodeJs as Backend, Python(Docker) as API connector, ReactJs as Frontend, MongoDB as Database, Github Actions for deployment and backup, Ubuntu/Webmin for hosting.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 8)</span> Server/Pipeline preparation, Database design and management, Building NodeJS API Backend, Making affiliate system and Payout, Securing endpoints, Encryption Module for saving users' key/secret, Fetching users' NFT balances and applying it to user subscription, Dockerize Python ccxt API connector.
+													</p>
+												</li>
+												<li><!-- MeoxIMBA -->
+													<div class="resume-project-name ms-auto">Cryptocurrency Trading Tool (Version 1)</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Token trading-bot management tool build with Laravel, it also have Round Contest system, Trading Tournaments, Affiliate/Share distribution, Wrapped Token Exchange, Wallet Web3 Login, Users' subscription.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel as Backend/Frontend(blade), NodeJs as API connector, MySQL/MongoDB as Database, Github Actions for deployment, Ubuntu/Webmin for hosting, Redis for JWT sharing.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 5)</span> Server/Pipeline preparation, Database design and management, Theme implementation to Laravel Blade, Building backend and user dashboard, Building NodeJS API connector for Binance/MEXC/Poloniex, Securing endpoints.
+													</p>
+												</li>
+												<li><!-- ISWAP -->
+													<div class="resume-project-name ms-auto">Token Swap (PancakeSwap Clone)</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Token swap platform like Uniswap or pancakeswap.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  ReactJS, TRON/BTT/BSC blockchain network, Smart contracts.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 2)</span> Server/Pipeline(GH, Vercel, Heroku) preparation, Making Smart Contracts with acceptable ABIs, Fetching Markets pairs, Live token rate conversion, Making/publishing NPM packages for contract connectivity, Managing TRON fullnode, Securing endpoints.
+													</p>
+												</li>
+												<li><!-- IMBA -->
+													<div class="resume-project-name ms-auto">CryptoCurrency Exchange</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Crypto Currency exchange Application using Laravel framework, listing of different coins and creating markets and coin pairs for users to Deposit/Withdraw/Trading different coins/tokens.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel, NodeJS/PM2, MySQL/MongoDB/Redis, EchoServer/WebSocket, TRON/BTC/ETH blockchain networks, Smart contracts.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 6)</span> Server/Pipeline/Database/Business logic
+														design and management, Installed and managed BTC/TRON/Matic/ETH(Geth) fullnodes, making APIs to connect fullnodes with NodeJS, Develop Deposit/Withdraw functions to blockchain wallets, making Echoserver for Trade Orders auto allocation, Implementation of TradingView charts/G2FA/JWT, User Role/Wallet/Order/Affiliate management, Securing endpoints.
+													</p>
+												</li>
+												<li><!-- ICR-MO/BO -->
+													<div class="resume-project-name ms-auto">Presale Backoffice</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Web application for management of a Token, with different user roles, the concept of staking coins, deposit and withdraw, merchants' wallet coin stock and inventory management, distributing and payment system with the Token.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Single)</span> Server/DB/Business logic design and management.
+													</p>
+												</li>
+												<li><!-- UC -->
+													<div class="resume-project-name ms-auto">Job Portal</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														Job portal web application with frontend users and SuperAdmin. It is using scaffolding templates to generate wildcard subdomains for each registered recruiters.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 2)</span> Server/DB/Business logic design and management.
+													</p>
+												</li>
+												<li><!-- Arena -->
+													<div class="resume-project-name ms-auto">Games Arena</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														A gaming portal with different games and betting platforms where we provide the currency balance to users with tokenized api and websockets from the currency exchanger.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel, NodeJS,GitLab Pipilines, Docker, AWS.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 2)</span> Server/DB/Business logic design and management.
+													</p>
+												</li>
+												<li><!-- UTurn -->
+													<div class="resume-project-name ms-auto">Uber Clone</div>
+													<p class="resume-project-desc ms-auto mtopp">
+														
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">Technology used:</span>  Laravel, NodeJS,Socket.IO, Google Maps, AWS.
+													</p>
+													<p class="resume-project-desc ms-auto">
+														<span class="resume-project-tags">My Roles & Responsibilities: (Team of 3)</span> Building Backend and API.
+													</p>
+												</li>
+
 											</ul>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used during this period:</h4>
 											<ul class="list-inline">
 												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Node.Js</span></li>
 												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Laravel</span></li>
-												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">ReactJs</span></li>
-												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MongoDB/MySQL</span></li>
-												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Docker</span></li>
-												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Golang</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">MongoDB/MySQL/Redis</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Docker/Heroku</span></li>
 												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Web3.js</span></li>
-												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Ethereum/Tron</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">ETH/Tron</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Golang</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">EchoServer</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">GitHub Actions</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">GitLab/Bitbucket Pipelines</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Ubuntu/Webmin/PM2</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">WP</span></li>
+												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">ReactJs</span></li>
 											</ul>
 										</div><!--//resume-timeline-item-desc-->
 
@@ -155,8 +285,8 @@
 											<div class="resume-position-time">Nov 2013 - May 2016</div>
 										</div><!--//resume-timeline-item-header-->
 										<div class="resume-timeline-item-desc">
-											<p>Worked as a PHP Developer, handled projects: Sportzwiki, Shopaddict </p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<p>Worked as a PHP Developer, made 6 Codeignitor, 1 Magento/Prestashop/Opencart, 50+ Wordpress, Managed 2 big magazine websites with over 10k users per day.</p>
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used during this period:</h4>
 											<ul class="list-inline">
 												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">CodeIgniter</span></li>
 												<li class="list-inline-item"><span class="badge bg-secondary badge-pill">Wordpress</span></li>
@@ -257,7 +387,7 @@
 								</div><!--//resume-skill-item-->
 							</div><!--resume-section-content-->
 						</section><!--//skills-section-->
-						<section class="resume-section education-section mb-5">
+						<section class="resume-section education-section mb-5 mtopercent">
 							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
 							<div class="resume-section-content">
 								<ul class="list-unstyled">
