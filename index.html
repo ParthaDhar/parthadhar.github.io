@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partha Dhar</title>
+<meta name="description" content="Backend and platform engineer in Kolkata, twelve years in, mostly on production systems that cannot be taken down.">
+<meta name="author" content="Partha Dhar">
+<link rel="icon" href="favicon.ico">
+<style>
+/* Screen: navy sidebar. Print: the sidebar switches to a light palette, see @media print. */
+@font-face { font-family: Carlito; src: url(assets/fonts/Carlito-Regular.ttf) format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: Carlito; src: url(assets/fonts/Carlito-Bold.ttf) format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+
+* { box-sizing: border-box; }
+html { background: #e9ebee; }
+body { margin: 0; padding: 24px 12px; font-family: Carlito, Calibri, "Liberation Sans", Arial, sans-serif; font-size: 15px; line-height: 1.5; color: #222; }
+a { color: #1f2d4a; text-decoration: underline; text-decoration-color: #7f8ca3; text-underline-offset: 2px; }
+a:hover, a:focus { text-decoration-color: currentColor; }
+h1, h2, h3, p, ul { margin: 0; }
+ul { padding-left: 18px; }
+li { margin-bottom: 6px; }
+
+.cv { display: flex; max-width: 1100px; margin: 0 auto; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.18); }
+.side { flex: 0 0 29%; padding: 32px 22px; background: #1f2d4a; color: #e6e9ef; }
+.main { flex: 0 0 71%; padding: 32px 36px; }
+
+.photo { display: block; width: 120px; height: 120px; margin: 0 auto 18px; border-radius: 6px; object-fit: cover; object-position: top; }
+.lbl { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 20px 0 8px; padding-bottom: 4px; border-bottom: 1px solid; }
+.side .lbl { color: #b9c3d6; border-color: #3a4a6e; }
+.side .lbl:first-of-type { margin-top: 0; }
+.main .lbl { color: #1f2d4a; border-color: #1f2d4a; margin-top: 26px; }
+.side p { margin: 0 0 4px; }
+.side a { color: #e6e9ef; text-decoration-color: #8f9bb8; }
+.grp { font-size: 13px; font-weight: 700; margin: 10px 0 4px; color: #cdd5e3; }
+.pills { margin: 0 0 4px; }
+.pills span { display: inline-block; font-size: 13px; padding: 1px 8px; margin: 0 4px 5px 0; border: 1px solid #5c6b8f; border-radius: 9px; color: #e6e9ef; }
+.main .pills span { border-color: #9aa5b8; color: #1f2d4a; background: #f6f7f9; }
+.deg { font-weight: 700; margin-top: 6px; }
+.yr { opacity: .75; font-size: 13.5px; }
+
+.name { font-size: 34px; font-weight: 700; letter-spacing: .5px; line-height: 1.05; color: #1f2d4a; text-transform: uppercase; }
+.tag { font-size: 17px; margin-top: 6px; }
+.sub { font-size: 14px; color: #555; margin-bottom: 4px; }
+.main p { margin-bottom: 8px; }
+.row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 14px; }
+.row h3 { font-size: 17px; color: #1f2d4a; }
+.row .d { font-size: 14px; color: #666; white-space: nowrap; margin-left: 12px; }
+.org { font-size: 14px; color: #555; margin-bottom: 6px; }
+
+@media screen and (max-width: 720px) {
+  body { padding: 0; }
+  .cv { flex-direction: column; box-shadow: none; }
+  .side, .main { flex: 0 0 auto; width: 100%; padding: 24px 18px; }
+  .row { display: block; }
+  .row .d { display: block; margin: 0; }
+}
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+  html, body { background: #fff; }
+  body { padding: 0; font-size: 10pt; line-height: 1.4; }
+  .cv { max-width: none; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .side { flex: 0 0 25%; padding: 14px 12px; background: #f0f2f5; color: #1f2d4a; border-right: 1px solid #d9dde4; }
+  .side .lbl { color: #1f2d4a; border-color: #c9cfda; }
+  .side a, .main a { color: inherit; text-decoration: none; }
+  .grp { color: #1f2d4a; }
+  .side .pills span { border-color: #b7bfcc; color: #1f2d4a; background: #fff; }
+  .main { flex: 0 0 75%; padding: 14px 18px; }
+  .lbl { font-size: 9pt; margin: 11pt 0 4pt; letter-spacing: 1px; }
+  .main .lbl { margin-top: 13pt; }
+  .row { margin-top: 8pt; }
+  li { margin-bottom: 3pt; }
+  .main p { margin-bottom: 5pt; }
+  .side p { margin-bottom: 2pt; }
+  .pills span { margin: 0 3px 3px 0; padding: 0 6px; }
+  .photo { width: 90px; height: 90px; }
+  .name { font-size: 24pt; }
+  .tag { font-size: 13pt; }
+  .sub, .org, .row .d { font-size: 10pt; }
+  .row h3 { font-size: 12pt; }
+  .grp, .pills span, .yr { font-size: 9.5pt; }
+  .row, .org, .deg, .pills, .side p, .main li { break-inside: avoid; }
+  .lbl, .row { break-after: avoid; }
+  .no-print { display: none; }
+}
+</style>
+</head>
+<body>
+<main class="cv">
+  <aside class="side">
+    <img class="photo" src="assets/images/ParthaDhar.jpg" alt="Partha Dhar">
+
+    <h2 class="lbl">Contact</h2>
+    <p>Kolkata, India</p>
+    <p><a href="mailto:parthadhar@hotmail.com">parthadhar@hotmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/parthadhar/">linkedin.com/in/parthadhar</a></p>
+    <p><a href="https://github.com/ParthaDhar">github.com/ParthaDhar</a></p>
+    <p class="no-print"><a href="dl/Partha-Dhar-CV.pdf">Download PDF</a></p>
+
+    <h2 class="lbl">Skills and tools</h2>
+    <p class="grp">Languages and frameworks</p>
+    <p class="pills"><span>Python</span><span>PHP / Laravel</span><span>Node.js</span><span>TypeScript</span><span>Bash</span><span>Solidity</span></p>
+    <p class="grp">Cloud and delivery</p>
+    <p class="pills"><span>AWS</span><span>Docker</span><span>GitLab CI</span><span>GitHub Actions</span><span>nginx</span><span>Apache</span><span>systemd</span></p>
+    <p class="grp">Data</p>
+    <p class="pills"><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>DuckDB</span><span>Redis</span><span>MongoDB</span></p>
+    <p class="grp">Security and quality</p>
+    <p class="pills"><span>SonarQube</span><span>opengrep</span><span>grype</span><span>trivy</span><span>fail2ban</span><span>iptables / ipset</span></p>
+
+    <h2 class="lbl">Education</h2>
+    <p class="deg">BTech, Computer Science and Engineering</p>
+    <p>B. P. Poddar Institute of Management and Technology <span class="yr">2009 - 2012</span></p>
+    <p class="deg">Diploma, Computer Science and Technology</p>
+    <p>Bengal Institute of Technology, Katwa <span class="yr">2005 - 2008</span></p>
+
+    <h2 class="lbl">Award</h2>
+    <p class="deg">Excellence in Customer Service</p>
+    <p>Brainium Information Technologies, 2018-19</p>
+
+    <h2 class="lbl">Languages</h2>
+    <p>Bengali (native)</p>
+    <p>Hindi (native)</p>
+    <p>English (professional working proficiency)</p>
+
+    <h2 class="lbl">Interests</h2>
+    <p>Books, Temples, History</p>
+  </aside>
+
+  <section class="main">
+    <h1 class="name">Partha Dhar</h1>
+    <p class="tag">Backend and platform engineer</p>
+    <p class="sub">Senior Software Developer, Technical Solution Architect remit since 2025</p>
+
+    <h2 class="lbl">Summary</h2>
+    <p>Backend and platform engineer, twelve years in, mostly on production systems that cannot be taken down. Senior Software Developer at Brainium Information Technologies since May 2016, with a Technical Solution Architect remit since 2025: feasibility analysis, risk registers, stack recommendations, schema design and cloud cost estimation.</p>
+    <p>Built cryptocurrency exchange infrastructure handling real money, with BTC, ETH and TRON full nodes operated in production. Incrementally modernised a legacy AWS and ColdFusion estate whose database holds records back to 1994, with no staging environment to practise on. Owned a serverless invoice pipeline end to end (51 of 52 commits) and set up the team's self-hosted code-quality gate.</p>
+    <p>By late 2022, I had written the backend for 4 business applications, 11 Node.js and MongoDB microservices and 5 Web3 services, set up CI/CD and Docker automation for 2 organisations, and managed 15+ VPS, 2 AWS accounts and 1 dedicated server. Every audit I write ends with the limits of that audit: what I did not check, and which of my earlier conclusions turned out to be wrong.</p>
+
+    <h2 class="lbl">Experience</h2>
+    <div class="row"><h3>Senior Software Developer</h3><span class="d">May 2016 - Present</span></div>
+    <p class="org">Brainium Information Technologies Pvt. Ltd., Kolkata. Technical Solution Architect remit since 2025.</p>
+    <ul>
+      <li>Operate a legacy AWS and ColdFusion estate whose Aurora MySQL database holds records back to 1994, with no staging environment and no test suite: staged deployment with a rollback path built on top of production, production access read-only by default, mail relayed through SES, Fail2Ban and iptables hardening. (2025 - present)</li>
+      <li>Diagnosed a production incident on that estate in which an autonomous blocking tool merged two flagged addresses into a /16 and dropped a search crawler's entire published range, discarding hundreds of thousands of crawler packets while tens of thousands of verified crawler ranges sat unread one layer above. Implemented a mandatory interlock that tests range overlap before every kernel-affecting firewall write, and restricted the authoritative allowlist to feeds published by the crawler operators themselves. (2026)</li>
+      <li>Sole author (51 of 52 commits) of a serverless invoice ingestion pipeline on AWS Lambda, SAM and EventBridge: format-aware UBL extraction, 48 gated migrations behind a snapshot, a read-only preflight and a verify step, keyset-cursor chunked ETL inside the 900 s Lambda limit, and upserts that never overwrite a human edit. 15,244 invoices re-transformed with zero errors; 21.9 GiB of duplicated JSON identified in a 26.2 GiB database. Live in production for its first provider. (2025 - 2026)</li>
+      <li>Built the team's quality gate: self-hosted SonarQube Community with about 20 curated analyser plugins, GitLab CI pipelines that block on the gate, and a 402-line Python bridge filing findings back as labelled, de-duplicated GitLab issues, adopted into three client pipelines. (2023 - 2024)</li>
+      <li>Second committer on three public interfaces of a Uniswap-V2-style multi-chain AMM across TRON, BitTorrent Chain and BSC: 146 commits and 8 merged pull requests from the organisation's first week, per-chain router and factory wiring and CREATE2 init-code hashes, deploy workflows to Vercel and Heroku. Live since 2022. (2022 - 2023)</li>
+      <li>Built cryptocurrency exchange infrastructure handling real money: installed and operated Bitcoin, Ethereum and TRON full nodes in production, Node.js bridge APIs for deposits and withdrawals to blockchain wallets, a WebSocket order-allocation server, and 2FA and JWT on the user side.</li>
+    </ul>
+    <p>Earlier product work, 2016 to 2023: a cryptocurrency trading-bot platform across two generations, Laravel first and then Node.js with a Dockerised Python exchange connector, where I wrote the at-rest encryption module holding users' own exchange API keys and read subscription tier from an on-chain NFT balance; a token presale back office; a job portal issuing a wildcard subdomain per recruiter; a device trade-in integration over partner APIs and headless browsers; a gaming portal fed by WebSocket balance updates; and a ride-hailing backend on Socket.IO.</p>
+    <p class="pills"><span>Laravel</span><span>Node.js</span><span>Python</span><span>TypeScript / React</span><span>MySQL / PostgreSQL / MongoDB / Redis</span><span>AWS (Lambda, SAM, RDS, SES)</span><span>Docker</span><span>GitLab CI / GitHub Actions</span><span>SonarQube</span><span>Web3 / TRON / ETH</span><span>nginx / Apache / systemd</span></p>
+
+    <div class="row"><h3>Web Developer</h3><span class="d">Nov 2013 - May 2016</span></div>
+    <p class="org">Digimason Web Pvt. Ltd., Kolkata</p>
+    <p>PHP developer on six CodeIgniter applications, one e-commerce delivery across Magento, PrestaShop and OpenCart, WordPress builds, and operational ownership of two high-traffic magazine sites: self-taught PHP compilation, Apache load sharing and nightly deployments, because the sites needed it.</p>
+    <p class="pills"><span>CodeIgniter</span><span>WordPress</span><span>Magento / PrestaShop / OpenCart</span><span>Apache</span><span>MySQL</span></p>
+
+    <h2 class="lbl">Selected personal work</h2>
+    <ul>
+      <li><b><a href="https://github.com/ParthaDhar/listenbrainz-widget">listenbrainz-widget</a></b> - Self-hosted now-playing SVG cards for ListenBrainz, MIT. Display-privacy flags are bound to the token at issue time, so editing the URL cannot widen them. ETag plus a soft-refresh parameter to beat a proxy that cached the fallback art.</li>
+      <li><b><a href="https://github.com/ParthaDhar/Audio_Quality_Profiling">Audio_Quality_Profiling</a></b> - Audio library quality and duplicate scanner: Python, ffprobe, mutagen. A lossy codec at a high sample rate is an upsample: flagged at 0.9 confidence, score halved. Every scoring path returns its evidence, not a bare number. Ran clean on a 4,100-file library.</li>
+      <li><b><a href="https://github.com/partha-dhar/wb-electoral-data">wb-electoral-data</a></b> - Bulk text-recovery pipeline for deliberately garbled government PDFs. Text came out as shifted garbage until a character-identifier (CID) mapping was built to decode the embedded fonts. 7,936 PDFs downloaded and validated, extraction logged at about 7.6 s per PDF, cross-check API calls self-throttled to 2 req/s under a published 50 req/s limit.</li>
+      <li><b>Bengali audiobook pipeline</b> - Text-to-speech pipeline for a Bengali epic: 76 commits in 10 days, 7 h 24 min of narrated audio, about 210 hand-approved corrections, run under a 4-thread cap on a 6-vCPU VPS with no GPU.</li>
+      <li><b>Vehicle telemetry server</b> - OBD-II telemetry server with 714 tests on SQLite and MariaDB, built against a 26.7M-datapoint corpus. Measurement reversed the design: 0 of 25 recorded drives completed a 0-60 run.</li>
+      <li><b>Multi-scanner aggregation</b> - Patched an upstream multi-scanner aggregator (grype, trivy, snyk and osv-scanner into one SQLite store) with three measured fixes so it actually aggregated: shared OSV identifiers 0 to 92, diff exposures 45 to 93, 43.6% coverage. A single scanner reporting zero is not evidence of safety; the product is the set of CVEs they disagree about.</li>
+      <li><b>A/B harness for an agent skill</b> - Three scenarios, two graded and one recorded as skipped, three runs per arm, six written assertions per scenario. Reported result: null, with cost deltas inside run-to-run variance.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
